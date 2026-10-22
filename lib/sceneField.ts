@@ -1,9 +1,9 @@
 import {
   BONE, CYAN, GOLD, MAT, MAT_DARK, MAT_TOP, MUTED, VIOLET,
-  hudLabel, marker, motionPhase, roundPanel, roundRect, smooth, wrapFill,
+  marker, motionPhase, roundRect, smooth, wrapFill,
   type Ctx, type SceneFonts,
 } from "./sceneKit";
-import type { ChapterId } from "./timeline";
+import { drawInset, lobe, rayLabel } from "./sceneLate";
 
 export function drawPropagate(ctx: Ctx, frame: number, fonts: SceneFonts): void {
   const enter = smooth((frame - 300) / 16);
@@ -149,8 +149,8 @@ function farStage(
   lobe(ctx, originX, originY, 58, 3.5, MUTED, 0.18, 200);
   lobe(ctx, originX, originY, -62, 3.2, MUTED, 0.14, 180);
 
-  rayLabel(ctx, fonts, originX, originY, angle, 300, `+${angle}\u00b0 desired`, CYAN);
-  rayLabel(ctx, fonts, originX, originY, -angle, 300, `\u2212${angle}\u00b0 desired`, CYAN);
+  rayLabel(ctx, fonts, originX, originY, angle, 300, `+${angle}° desired`, CYAN);
+  rayLabel(ctx, fonts, originX, originY, -angle, 300, `−${angle}° desired`, CYAN);
   ctx.fillStyle = MUTED;
   ctx.font = `12px ${fonts.mono}`;
   ctx.fillText("Other orders. Positions are not taken from a spectrum.", 700, 168);

@@ -5,7 +5,8 @@ import {
   type Camera, type Ctx, type SceneFonts,
 } from "./sceneKit";
 import { drawAssembly, drawSection } from "./sceneAperture";
-import { drawCompare, drawFar, drawHud, drawPropagate } from "./sceneField";
+import { drawFar, drawPropagate } from "./sceneField";
+import { drawCompare, drawHud } from "./sceneLate";
 
 export { STAGE_W, STAGE_H } from "./sceneKit";
 export type { SceneFonts } from "./sceneKit";
