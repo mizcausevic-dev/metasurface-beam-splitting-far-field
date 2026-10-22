@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://mizcausevic-dev.github.io/metasurface-beam-splitting-far-field/sitemap.xml

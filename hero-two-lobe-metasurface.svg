@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Illustrative still of a dielectric metasurface beam splitter</title>
+  <desc id="heroDesc">A dark technical schematic. Cyan input reaches a row of rectangular dielectric pillars on a substrate. Partway along the row the field splits into two transmitted lobes. Dimmer rays stay in frame as leakage. A violet mark shows handedness as control. Gold ticks mark designed phase. This is not a micrograph and not a computed field.</desc>
+  <rect width="1280" height="720" fill="#0B1019"/>
+  <g stroke="#1C2636" stroke-width="1">
+    <path d="M48 48 H1232"/>
+    <path d="M48 672 H1232"/>
+  </g>
+  <text x="64" y="92" fill="#E7EEF6" font-family="Space Grotesk, ui-sans-serif, sans-serif" font-size="28" font-weight="600">Spin-tunable split, drawn as a schematic</text>
+  <text x="64" y="122" fill="#93A0B5" font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">Illustrative still. Not a micrograph. Not a computed field. The split is drawn partway along the row so both beams fit.</text>
+
+  <!-- Plate, drawn first so the pillars sit on it. -->
+  <polygon points="120,430 1080,430 1148,492 188,492" fill="#141C28" stroke="#344257" stroke-width="2"/>
+  <polygon points="188,492 1148,492 1148,528 188,528" fill="#243244" stroke="#344257"/>
+  <text x="210" y="516" fill="#93A0B5" font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">Substrate. Silica in the cited summary.</text>
+
+  <g stroke="#00E5FF" stroke-width="3" fill="none" opacity="0.92">
+    <path d="M64 402 H250"/>
+    <path d="M64 416 H250"/>
+    <path d="M64 430 H250"/>
+  </g>
+  <text x="64" y="384" fill="#00E5FF" font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">Incident CP</text>
+
+  <text x="132" y="268" fill="#9D4EDD" font-family="Space Grotesk, ui-sans-serif, sans-serif" font-size="32">↻</text>
+  <text x="176" y="262" fill="#9D4EDD" font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">Handedness. Control, not power.</text>
+
+  <text x="270" y="360" fill="#FFD166" font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">Phase ticks. Diagram marks, not a measured profile.</text>
+
+  <g fill="#344257" stroke="#51627A">
+    <rect x="270" y="398" width="48" height="32" rx="3"/>
+    <rect x="330" y="398" width="48" height="32" rx="3"/>
+    <rect x="390" y="398" width="48" height="32" rx="3"/>
+    <rect x="450" y="398" width="48" height="32" rx="3"/>
+    <rect x="510" y="398" width="48" height="32" rx="3"/>
+    <rect x="570" y="398" width="48" height="32" rx="3"/>
+    <rect x="630" y="398" width="48" height="32" rx="3"/>
+    <rect x="860" y="398" width="48" height="32" rx="3"/>
+    <rect x="920" y="398" width="48" height="32" rx="3"/>
+    <rect x="980" y="398" width="48" height="32" rx="3"/>
+  </g>
+  <g stroke="#FFD166" stroke-width="2">
+    <path d="M282 414 h24"/><path d="M342 414 h24"/><path d="M402 414 h24"/>
+    <path d="M462 414 h24"/><path d="M522 414 h24"/><path d="M582 414 h24"/>
+    <path d="M642 414 h24"/>
+    <path d="M872 414 h24"/><path d="M932 414 h24"/><path d="M992 414 h24"/>
+  </g>
+
+  <!-- Beams leave the gap and stay above the plate face. -->
+  <polygon points="748,414 1188,250 1188,330" fill="#00E5FF" opacity="0.55"/>
+  <polygon points="748,414 1188,360 1188,424" fill="#00E5FF" opacity="0.42"/>
+  <polygon points="748,414 1108,400 1108,424" fill="#93A0B5" opacity="0.35"/>
+  <text x="1040" y="236" fill="#00E5FF" font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">Desired pair</text>
+  <text x="1116" y="470" fill="#93A0B5" font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">Leakage stays</text>
+
+  <text x="64" y="620" fill="#93A0B5" font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">Colors are overlays: cyan transport, gold phase, violet control. Angles and efficiency are not drawn on this still.</text>
+</svg>
