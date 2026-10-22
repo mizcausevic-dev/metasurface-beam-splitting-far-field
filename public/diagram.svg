@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="diagramTitle diagramDesc">
+  <title id="diagramTitle">Causal diagram of a spin-tunable dielectric beam splitter</title>
+  <desc id="diagramDesc">Incident circular polarization passes through anisotropic dielectric meta-atoms. Propagation phase and geometric phase set the aperture field. The far field splits into desired lobes and other orders. Handedness is a control input, not part of the power path.</desc>
+  <rect width="1200" height="820" fill="#0B1019"/>
+  <g font-family="ui-monospace, JetBrains Mono, monospace" fill="#E7EEF6">
+    <text x="48" y="58" font-size="28" font-family="Space Grotesk, sans-serif">Causal path, not a device layout</text>
+    <text x="48" y="86" font-size="14" fill="#93A0B5">Dielectric spin-tunable beam splitter. Colors are overlays. No efficiency is claimed.</text>
+  </g>
+  <g font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">
+    <rect x="48" y="130" width="250" height="92" rx="12" fill="#141C28" stroke="#00E5FF"/>
+    <text x="68" y="164" fill="#00E5FF">1. Incident field</text>
+    <text x="68" y="188" fill="#E7EEF6">Circular polarization</text>
+    <rect x="360" y="130" width="280" height="92" rx="12" fill="#141C28" stroke="#344257"/>
+    <text x="380" y="164" fill="#E7EEF6">2. Dielectric meta-atoms</text>
+    <text x="380" y="188" fill="#93A0B5">Anisotropic pillars on a substrate</text>
+    <rect x="710" y="130" width="440" height="92" rx="12" fill="#141C28" stroke="#00E5FF"/>
+    <text x="730" y="164" fill="#00E5FF">5. Transmitted aperture field</text>
+    <text x="730" y="188" fill="#93A0B5">Complex transmission across the aperture</text>
+    <rect x="48" y="300" width="280" height="110" rx="12" fill="#141C28" stroke="#FFD166"/>
+    <text x="68" y="336" fill="#FFD166">3. Propagation phase</text>
+    <text x="68" y="362" fill="#E7EEF6">Set by cross-section</text>
+    <text x="68" y="384" fill="#93A0B5">Same sign for both spins</text>
+    <rect x="360" y="300" width="280" height="110" rx="12" fill="#141C28" stroke="#9D4EDD"/>
+    <text x="380" y="336" fill="#9D4EDD">4. Geometric phase</text>
+    <text x="380" y="362" fill="#E7EEF6">Set by in-plane rotation α</text>
+    <text x="380" y="384" fill="#93A0B5">Sign flips with handedness</text>
+    <rect x="710" y="280" width="200" height="150" rx="12" fill="#141C28" stroke="#9D4EDD"/>
+    <text x="730" y="316" fill="#9D4EDD">Control</text>
+    <text x="730" y="342" fill="#E7EEF6">Handedness</text>
+    <text x="730" y="366" fill="#93A0B5">Selects which</text>
+    <text x="730" y="388" fill="#93A0B5">phase profile</text>
+    <text x="730" y="410" fill="#93A0B5">the aperture presents</text>
+    <rect x="48" y="500" width="340" height="230" rx="12" fill="#141C28" stroke="#00E5FF"/>
+    <text x="68" y="538" fill="#00E5FF">6a. Desired lobes</text>
+    <text x="68" y="566" fill="#E7EEF6">Two designed directions</text>
+    <text x="68" y="592" fill="#93A0B5">Design 1, cited summary:</text>
+    <text x="68" y="616" fill="#E7EEF6">RCP ±19°, LCP ±42°</text>
+    <text x="68" y="648" fill="#93A0B5">Simulated angles.</text>
+    <text x="68" y="670" fill="#93A0B5">Not recomputed here.</text>
+    <text x="68" y="700" fill="#93A0B5">Lobe width is illustrative.</text>
+    <rect x="420" y="500" width="340" height="230" rx="12" fill="#141C28" stroke="#93A0B5"/>
+    <text x="440" y="538" fill="#E7EEF6">6b. Other orders</text>
+    <text x="440" y="566" fill="#93A0B5">Finite pillars, finite aperture,</text>
+    <text x="440" y="588" fill="#93A0B5">and imperfect conversion feed</text>
+    <text x="440" y="610" fill="#93A0B5">spatial frequencies you did</text>
+    <text x="440" y="632" fill="#93A0B5">not specify.</text>
+    <text x="440" y="664" fill="#E7EEF6">Not drawn as zero.</text>
+    <text x="440" y="688" fill="#93A0B5">Positions in the player are</text>
+    <text x="440" y="710" fill="#93A0B5">not from a spectrum.</text>
+    <rect x="792" y="500" width="360" height="230" rx="12" fill="#141C28" stroke="#FFD166"/>
+    <text x="812" y="538" fill="#FFD166">6c. Still in the budget</text>
+    <text x="812" y="566" fill="#E7EEF6">Reflection</text>
+    <text x="812" y="590" fill="#E7EEF6">Unconverted polarization</text>
+    <text x="812" y="614" fill="#E7EEF6">Absorption and scatter</text>
+    <text x="812" y="648" fill="#93A0B5">Weights are not computed</text>
+    <text x="812" y="670" fill="#93A0B5">on this page. Charge is not</text>
+    <text x="812" y="692" fill="#93A0B5">carried as a current.</text>
+  </g>
+  <g fill="none" stroke="#00E5FF" stroke-width="1.6">
+    <path d="M298 176 H360" marker-end="url(#arrowCyan)"/>
+    <path d="M640 176 H710" marker-end="url(#arrowCyan)"/>
+    <path d="M188 392 V460 H218 V500" marker-end="url(#arrowCyan)"/>
+  </g>
+  <g fill="none" stroke="#FFD166" stroke-width="1.6">
+    <path d="M188 410 C188 450, 820 450, 860 222" marker-end="url(#arrowGold)"/>
+  </g>
+  <g fill="none" stroke="#9D4EDD" stroke-width="1.6" stroke-dasharray="5 4">
+    <path d="M500 410 C520 460, 760 250, 810 250"/>
+    <path d="M810 280 V222" marker-end="url(#arrowViolet)"/>
+  </g>
+  <defs>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#00E5FF"/>
+    </marker>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#FFD166"/>
+    </marker>
+    <marker id="arrowViolet" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#9D4EDD"/>
+    </marker>
+  </defs>
+  <text x="48" y="782" fill="#93A0B5" font-family="ui-monospace, monospace" font-size="13">Solid cyan: power path. Gold: phase actuator. Dashed violet: control. Source boundary: Khalid et al. 2022, numerical. Angles via Shen and Huang 2022, Table 3.</text>
+</svg>

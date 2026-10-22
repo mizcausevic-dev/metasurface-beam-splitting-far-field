@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-labelledby="mapTitle mapDesc">
+  <title id="mapTitle">Mindmap of metasurface beam-splitting far field</title>
+  <desc id="mapDesc">A map from incident circular polarization through propagation and geometric phase to a far field that contains desired lobes, other orders, and unquantified losses.</desc>
+  <rect width="1200" height="860" fill="#0B1019"/>
+  <text x="48" y="56" fill="#E7EEF6" font-family="Space Grotesk, sans-serif" font-size="28">Mindmap: what is known, what is only drawn</text>
+  <text x="48" y="84" fill="#93A0B5" font-family="ui-monospace, monospace" font-size="14">Center claim is the architecture. Leaves are either cited, conventional, or explicitly schematic.</text>
+  <g font-family="ui-monospace, JetBrains Mono, monospace" font-size="14">
+    <rect x="430" y="360" width="340" height="110" rx="16" fill="#141C28" stroke="#00E5FF" stroke-width="1.6"/>
+    <text x="450" y="400" fill="#00E5FF">Spin-tunable</text>
+    <text x="450" y="424" fill="#E7EEF6">dielectric beam splitter</text>
+    <text x="450" y="448" fill="#93A0B5">Far field keeps its leakage</text>
+    <rect x="40" y="140" width="280" height="120" rx="12" fill="#141C28" stroke="#9D4EDD"/>
+    <text x="58" y="174" fill="#9D4EDD">Input</text>
+    <text x="58" y="198" fill="#E7EEF6">Circular polarization</text>
+    <text x="58" y="222" fill="#93A0B5">Handedness is the control</text>
+    <text x="58" y="242" fill="#93A0B5">Not a nuisance variable</text>
+    <rect x="40" y="300" width="280" height="130" rx="12" fill="#141C28" stroke="#344257"/>
+    <text x="58" y="334" fill="#E7EEF6">Aperture</text>
+    <text x="58" y="358" fill="#93A0B5">Silicon nanopillars</text>
+    <text x="58" y="378" fill="#93A0B5">on silica, as described</text>
+    <text x="58" y="402" fill="#93A0B5">400 × 400 nm, 780 nm</text>
+    <rect x="40" y="470" width="280" height="120" rx="12" fill="#141C28" stroke="#FFD166"/>
+    <text x="58" y="504" fill="#FFD166">Propagation phase</text>
+    <text x="58" y="528" fill="#E7EEF6">Cross-section</text>
+    <text x="58" y="552" fill="#93A0B5">Does not flip with spin</text>
+    <rect x="40" y="630" width="280" height="120" rx="12" fill="#141C28" stroke="#9D4EDD"/>
+    <text x="58" y="664" fill="#9D4EDD">Geometric phase</text>
+    <text x="58" y="688" fill="#E7EEF6">Rotation α, about ±2α</text>
+    <text x="58" y="712" fill="#93A0B5">Diagram convention</text>
+    <rect x="880" y="120" width="280" height="140" rx="12" fill="#141C28" stroke="#00E5FF"/>
+    <text x="898" y="154" fill="#00E5FF">Desired lobes</text>
+    <text x="898" y="178" fill="#E7EEF6">Design 1, simulated</text>
+    <text x="898" y="202" fill="#E7EEF6">RCP ±19°</text>
+    <text x="898" y="226" fill="#E7EEF6">LCP ±42°</text>
+    <rect x="880" y="290" width="280" height="130" rx="12" fill="#141C28" stroke="#93A0B5"/>
+    <text x="898" y="324" fill="#E7EEF6">Other orders</text>
+    <text x="898" y="348" fill="#93A0B5">Kept in the drawing</text>
+    <text x="898" y="372" fill="#93A0B5">Magnitude not computed</text>
+    <text x="898" y="396" fill="#93A0B5">Angles not from a spectrum</text>
+    <rect x="880" y="450" width="280" height="140" rx="12" fill="#141C28" stroke="#FFD166"/>
+    <text x="898" y="484" fill="#FFD166">Open budget</text>
+    <text x="898" y="508" fill="#E7EEF6">Reflection</text>
+    <text x="898" y="530" fill="#E7EEF6">Unconverted polarization</text>
+    <text x="898" y="552" fill="#E7EEF6">Absorption, unnumbered</text>
+    <rect x="880" y="620" width="280" height="160" rx="12" fill="#141C28" stroke="#9D4EDD"/>
+    <text x="898" y="654" fill="#9D4EDD">Evidence boundary</text>
+    <text x="898" y="678" fill="#93A0B5">Abstract: primary</text>
+    <text x="898" y="700" fill="#93A0B5">Angles: review table</text>
+    <text x="898" y="722" fill="#93A0B5">Phase plot: convention</text>
+    <text x="898" y="744" fill="#93A0B5">Wavefronts: schematic</text>
+  </g>
+  <g fill="none" stroke="#344257" stroke-width="1.4">
+    <path d="M320 200 C380 200, 390 390, 430 400"/>
+    <path d="M320 365 C380 365, 390 410, 430 415"/>
+    <path d="M320 530 C380 520, 400 450, 430 440"/>
+    <path d="M320 690 C390 680, 400 460, 430 455"/>
+    <path d="M770 390 C830 300, 840 190, 880 190"/>
+    <path d="M770 415 C830 400, 840 350, 880 355"/>
+    <path d="M770 440 C830 470, 840 510, 880 520"/>
+    <path d="M770 455 C840 560, 850 690, 880 700"/>
+  </g>
+  <text x="48" y="820" fill="#93A0B5" font-family="ui-monospace, monospace" font-size="13">Khalid et al., Opt. Express 30, 13459-13468 (2022). Angle leaves follow Shen and Huang, Nanomanufacturing 2022, 2, 194-228, Table 3. Design 2 is omitted from the map on purpose.</text>
+</svg>
