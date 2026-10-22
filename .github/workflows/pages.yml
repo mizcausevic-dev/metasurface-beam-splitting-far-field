@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: pages
@@ -42,6 +43,30 @@ jobs:
             exit 1
           fi
           printf '%s\n' "$push_log"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+      - name: Enable Pages from the gh-pages branch
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          auth=(-H "Authorization: Bearer ${GITHUB_TOKEN}" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28")
+          code=$(curl -sS -o /tmp/pages.json -w "%{http_code}" "${auth[@]}" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages")
+          echo "pages-get:${code}"
+          if [ "$code" = "200" ]; then
+            python3 -c 'import json; d=json.load(open("/tmp/pages.json")); print(d.get("html_url"), (d.get("source") or {}).get("branch"))'
+            exit 0
+          fi
+          create=$(curl -sS -o /tmp/pages-create.json -w "%{http_code}" -X POST "${auth[@]}" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages" \
+            -d '{"build_type":"legacy","source":{"branch":"gh-pages","path":"/"}}')
+          echo "pages-create:${create}"
+          cat /tmp/pages-create.json
+          if [ "$create" != "201" ] && [ "$create" != "409" ]; then
+            echo "::warning title=Pages was not enabled::The gh-pages branch is published. GitHub returned ${create} from the Pages API. In the repo, open Settings, Pages, Deploy from a branch, choose gh-pages and the root folder, then save."
+            exit 1
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
