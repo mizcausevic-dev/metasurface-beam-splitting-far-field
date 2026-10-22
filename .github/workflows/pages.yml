@@ -26,14 +26,22 @@ jobs:
           GITHUB_PAGES: "1"
       - name: Publish the gh-pages branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          set -euo pipefail
+          # Identity must be global. A local config on the checkout does not apply
+          # to the new repository created inside out/, and commit exits 128.
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cd out
           touch .nojekyll
-          git init
+          git init -b gh-pages
           git add -A
           git commit -m "Publish static export"
-          git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:gh-pages
+          if ! push_log=$(git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:gh-pages 2>&1); then
+            echo "::error title=gh-pages push failed::${push_log}"
+            printf '%s\n' "$push_log"
+            exit 1
+          fi
+          printf '%s\n' "$push_log"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
