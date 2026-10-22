@@ -18,7 +18,7 @@ export default function HomePage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={withBase("/hero-two-lobe-metasurface.svg")}
-            alt="Illustrative still of rectangular dielectric pillars on a glass plate, a cyan input, two transmitted lobes, and dimmer leakage rays."
+            alt="Illustrative schematic of rectangular dielectric pillars on a substrate, a cyan input, two transmitted lobes, and dimmer leakage rays."
             width={1280}
             height={720}
           />
