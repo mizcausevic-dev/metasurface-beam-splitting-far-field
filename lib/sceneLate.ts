@@ -1,4 +1,11 @@
-function lobe(
+import {
+  BONE, CYAN, GOLD, MAT, MAT_DARK, MUTED, VIOLET,
+  hudLabel, roundPanel, roundRect, smooth, wrapFill,
+  type Ctx, type SceneFonts,
+} from "./sceneKit";
+import type { ChapterId } from "./timeline";
+
+export function lobe(
   ctx: Ctx,
   x: number,
   y: number,
@@ -23,7 +30,7 @@ function lobe(
   ctx.restore();
 }
 
-function rayLabel(
+export function rayLabel(
   ctx: Ctx,
   fonts: SceneFonts,
   x: number,
@@ -41,7 +48,7 @@ function rayLabel(
   ctx.fillText(text, lx, ly);
 }
 
-function drawInset(ctx: Ctx, fonts: SceneFonts, frame: number): void {
+export function drawInset(ctx: Ctx, fonts: SceneFonts, frame: number): void {
   const open = smooth((frame - 560) / 30);
   ctx.save();
   ctx.globalAlpha = open;
@@ -72,12 +79,10 @@ export function drawCompare(ctx: Ctx, frame: number, fonts: SceneFonts): void {
   const enter = smooth((frame - 750) / 16);
   ctx.save();
   ctx.globalAlpha = enter;
-
   const cross = frame < 840 ? 0 : frame < 880 ? smooth((frame - 840) / 40) : 1;
   const settled = frame >= 960;
   const rcpStrength = settled ? 1 : 1 - cross * 0.6;
   const lcpStrength = settled ? 1 : 0.35 + cross * 0.65;
-
   ctx.font = `600 22px ${fonts.sans}`;
   ctx.fillStyle = BONE;
   ctx.fillText(settled ? "Stable overview" : "Compare selected polarization inputs", 48, 52);
@@ -90,11 +95,9 @@ export function drawCompare(ctx: Ctx, frame: number, fonts: SceneFonts): void {
     48,
     76,
   );
-
   miniAssembly(ctx, fonts);
   stateCard(ctx, fonts, 300, 110, "RCP", 19, CYAN, rcpStrength, settled ? 1 : frame >= 840 ? 0.72 : 1);
   stateCard(ctx, fonts, 640, 110, "LCP", 42, VIOLET, lcpStrength, 1);
-
   roundPanel(ctx, 980, 110, 260, 250);
   ctx.font = `600 15px ${fonts.sans}`;
   ctx.fillStyle = BONE;
@@ -110,7 +113,6 @@ export function drawCompare(ctx: Ctx, frame: number, fonts: SceneFonts): void {
     226,
     15,
   );
-
   roundPanel(ctx, 48, 470, 1192, 210);
   ctx.fillStyle = BONE;
   ctx.font = `600 15px ${fonts.sans}`;
@@ -215,7 +217,6 @@ export function drawHud(ctx: Ctx, frame: number, view: ChapterId, fonts: SceneFo
   }
   if (view === "compare" && frame >= 960) chips.push({ text: "Stable overview", color: CYAN });
   chips.push({ text: "Schematic, not a computed field", color: MUTED });
-
   let x = 24;
   for (const chip of chips) {
     x += hudLabel(ctx, fonts, x, 24, chip.text, chip.color) + 8;
